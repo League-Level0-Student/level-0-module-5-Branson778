@@ -1,10 +1,11 @@
-
+int x1 = 250;
+  int x2 = 500;
 void setup() {
   size(800,500);
 }
 
 void draw() {
-  
+background(#FFFFFF);
   // Go to the recipe to run the demonstration before starting this program
   
   /*
@@ -14,14 +15,31 @@ void draw() {
   When the rings hit the side of the sketch, make them reverse their direction.
   */
   int size=200;
-  for(int i = 0;i < 8; i++){
+  for(int i = 20;i > 0; i--){
     if (i%2==0){
-      fill(255,0,0);
+      noFill();
     }
     else{
-      fill(#FFFFFF);
+      noFill();
     }
-    ellipse(250,250,size,size);
-    size-=25;
+    ellipse(x1,250,size,size);
+    size-=10;
+  }
+    int size2=200;
+  for(int i = 20;i > 0; i--){
+    if (i%2==0){
+     noFill();
+    }
+    else{
+     noFill();
+    }
+    ellipse(x2,250,size2,size2);
+    size2-=10;
+  }
+ x1++;
+  x2--;
+  if(x1>800){
+    x1=0;
+    x2=800;
   }
 }

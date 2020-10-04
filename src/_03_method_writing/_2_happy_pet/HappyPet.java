@@ -30,7 +30,10 @@ else if(task==2) {
 
 			// 6. If you determine the happiness level is large enough, tell the
 			//    user that he loves his pet and use break; to exit for loop.
-		
+		if (happinessLevel>=32) {
+			JOptionPane.showMessageDialog(null, "Your pet is very happy, you must love your pet!");
+		break;
+		}
 		
 		}
 	}
